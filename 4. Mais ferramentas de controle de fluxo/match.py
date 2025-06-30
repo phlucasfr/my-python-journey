@@ -1,3 +1,5 @@
+from enum import Enum
+
 def http_error(status):
     match status:
         case 400:
@@ -42,4 +44,22 @@ def onde_esta(ponto):
             print("Não é um ponto")
 
 ponto = Ponto(0,2)
-onde_esta(ponto)        
+onde_esta(ponto)      
+
+class Cor(Enum):
+    Vermelho = 'vermelho'
+    Verde = 'Verde'
+    Azul = 'Azul'
+
+color = Cor.Azul
+match color:
+    case Cor.Vermelho:
+        print("Eu vejo vermelho!")
+    case Cor.Verde:
+        print("Eu vejo verde!")
+    case Cor.Azul:
+        print("Eu vejo azul!")
+
+
+
+    
