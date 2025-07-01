@@ -21,3 +21,18 @@ def fib2(n):
 
 f5000 = fib2(5000)
 print(f5000)
+
+def pergunta_ok(mensagem, tentativas=4, lembrete='Por favor, tente novamente!'):
+    while True:
+        resposta = input(mensagem)
+        if resposta in {'s', 'sim', 'é'}:
+            return True
+        if resposta in {'n', 'não', 'nah'}:
+            return False
+        tentativas = tentativas - 1
+        if tentativas < 0:
+            raise ValueError('resposta inválida de usuário')
+        print(lembrete)
+
+pergunta_ok('Deseja continuar?')
+
