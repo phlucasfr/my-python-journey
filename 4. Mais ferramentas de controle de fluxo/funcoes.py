@@ -57,3 +57,21 @@ def f(pos1, pos2, /, pos_ou_kwd, *, kwd1, kwd2):
 # Se / e * não estão presentes na definição da função, 
 # argumentos podem ser passados para uma função por posição ou por nome.
 
+def arg_padrao(arg):
+    print(arg)
+
+arg_padrao("posicional")
+arg_padrao(arg="nomeado")
+
+def somente_posicional(arg, /):
+    print(arg)
+
+somente_posicional("somente posicional")
+
+def somente_nomeado(*, arg):
+    print(arg)
+
+somente_nomeado(arg="somente nomeado")
+
+
+
