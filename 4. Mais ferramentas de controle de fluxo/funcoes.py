@@ -51,3 +51,9 @@ loja_de_queijos("Limburger", "Está muito mole, senhor",
            cliente="John Cleese",
            sketch="Sketch da Loja de Queijos")
 
+def f(pos1, pos2, /, pos_ou_kwd, *, kwd1, kwd2):
+    pass
+
+# Se / e * não estão presentes na definição da função, 
+# argumentos podem ser passados para uma função por posição ou por nome.
+
