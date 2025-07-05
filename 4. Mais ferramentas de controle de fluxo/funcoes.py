@@ -73,5 +73,25 @@ def somente_nomeado(*, arg):
 
 somente_nomeado(arg="somente nomeado")
 
+def concat(*args, sep="/"):
+    print(sep.join(args))
+
+concat("terra", "marte", "vênus")
+concat("terra", "marte", "vênus", sep=".")
+
+print(list(range(3,6)))
+
+args = [3, 6]
+print(list(range(*args)))
+
+def cria_incrementador(n):
+    return lambda x: x + n
+
+f = cria_incrementador(42)
+print(f(0))
+print(f(1))
+
+
+
 
 
