@@ -91,7 +91,17 @@ f = cria_incrementador(42)
 print(f(0))
 print(f(1))
 
+def minha_função():
+
+    """Não faça nada, mas documente o fato.
 
 
+    Não, é sério, ela faz nada mesmo.
+
+    """
+
+    pass
+
+print(minha_função.__doc__)
 
 
